@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Packing
 {
-    public partial class Form1 : Form
+    public partial class Packing : Form
     {
-        public Form1()
+        public Packing()
         {
             InitializeComponent();
         }
