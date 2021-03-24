@@ -35,8 +35,6 @@ namespace Packing
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.configuracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.conexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -44,18 +42,19 @@ namespace Packing
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtUpcTag);
-            this.groupBox1.Location = new System.Drawing.Point(30, 31);
+            this.groupBox1.Location = new System.Drawing.Point(32, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 167);
+            this.groupBox1.Size = new System.Drawing.Size(613, 80);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // txtUpcTag
             // 
-            this.txtUpcTag.Location = new System.Drawing.Point(59, 51);
+            this.txtUpcTag.Location = new System.Drawing.Point(57, 30);
             this.txtUpcTag.Name = "txtUpcTag";
-            this.txtUpcTag.Size = new System.Drawing.Size(479, 26);
+            this.txtUpcTag.Size = new System.Drawing.Size(498, 26);
             this.txtUpcTag.TabIndex = 1;
+            this.txtUpcTag.TextChanged += new System.EventHandler(this.txtUpcTag_TextChanged);
             // 
             // menuStrip1
             // 
@@ -65,15 +64,12 @@ namespace Packing
             this.configuracionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1581, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1533, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // configuracionesToolStripMenuItem
             // 
-            this.configuracionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.conexionToolStripMenuItem,
-            this.salirToolStripMenuItem});
             this.configuracionesToolStripMenuItem.Name = "configuracionesToolStripMenuItem";
             this.configuracionesToolStripMenuItem.Size = new System.Drawing.Size(156, 29);
             this.configuracionesToolStripMenuItem.Text = "&Configuraciones";
@@ -84,30 +80,19 @@ namespace Packing
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // conexionToolStripMenuItem
-            // 
-            this.conexionToolStripMenuItem.Name = "conexionToolStripMenuItem";
-            this.conexionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.conexionToolStripMenuItem.Text = "&Conexión";
-            this.conexionToolStripMenuItem.Click += new System.EventHandler(this.conexionToolStripMenuItem_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.salirToolStripMenuItem.Text = "&Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
             // Packing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1581, 928);
+            this.ClientSize = new System.Drawing.Size(1533, 772);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Packing";
             this.Text = "Packing";
+            this.Load += new System.EventHandler(this.Packing_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Packing_KeyPress);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -124,8 +109,6 @@ namespace Packing
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem configuracionesToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem conexionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 
