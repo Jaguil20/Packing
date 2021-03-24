@@ -37,10 +37,6 @@ namespace Packing
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.GbDatosEscaneados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.GbDatosCorte.SuspendLayout();
-            this.GbBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -68,7 +64,7 @@ namespace Packing
             this.configuracionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1550, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1533, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,16 +78,13 @@ namespace Packing
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 37);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Packing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1550, 839);
-            this.Controls.Add(this.GbBotones);
-            this.Controls.Add(this.GbDatosCorte);
-            this.Controls.Add(this.GbDatosEscaneados);
+            this.ClientSize = new System.Drawing.Size(1533, 772);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
@@ -104,11 +97,6 @@ namespace Packing
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.GbDatosEscaneados.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.GbDatosCorte.ResumeLayout(false);
-            this.GbDatosCorte.PerformLayout();
-            this.GbBotones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
