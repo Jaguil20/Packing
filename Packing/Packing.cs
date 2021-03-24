@@ -26,7 +26,6 @@ namespace Packing
         {
             if (!txtUpcTag.Focused)
             {
-                //Focus
                 txtUpcTag.Focus();
                 txtUpcTag.Text += e.KeyChar;
                 txtUpcTag.SelectionStart = txtUpcTag.Text.Length;
