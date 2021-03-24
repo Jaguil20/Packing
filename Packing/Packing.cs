@@ -16,5 +16,35 @@ namespace Packing
         {
             InitializeComponent();
         }
+
+        private void Packing_Load(object sender, EventArgs e)
+        {
+            txtUpcTag.Focus();
+        }
+
+        private void Packing_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!txtUpcTag.Focused)
+            {
+                txtUpcTag.Focus();
+                txtUpcTag.Text += e.KeyChar;
+                txtUpcTag.SelectionStart = txtUpcTag.Text.Length;
+            }
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtUpcTag_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ScanUpcTag()
+        {
+
+        }
     }
 }
