@@ -12,6 +12,12 @@ namespace Packing
 {
     public partial class Packing : Form
     {
+        string UpcCode;
+        string Corte;
+        string Estilo;
+        string Bulto;
+        string Secuencia;
+
         public Packing()
         {
             InitializeComponent();
@@ -41,10 +47,19 @@ namespace Packing
         {
 
         }
-
-        private void ScanUpcTag()
+        private void txtUpcTag_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == Convert.ToChar(Keys.Return))
+            {
+                UpcCode = txtUpcTag.Text;
+                Corte = UpcCode.Substring(0, 7);
+                Bulto = UpcCode.Substring(7, 3);
+                Secuencia = UpcCode.Substring(10, 3);
 
+                txtCorte.Text = Corte;
+                txtBulto.Text = Bulto;
+                txtSecuencia.Text = Secuencia;
+            }
         }
     }
 }
